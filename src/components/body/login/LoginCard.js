@@ -19,7 +19,7 @@ class LoginCard extends React.Component {
   }
 
   changeHandler(event) {
-    const input = event.target.value;
+    const input = event;
     this.setState({
       userName: input,
     }, () => {

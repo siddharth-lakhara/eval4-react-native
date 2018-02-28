@@ -1,5 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Button,
+} from 'react-native';
 import LeaderTable from './leaderTable';
 
 class LeaderBoard extends React.Component {
@@ -34,22 +40,27 @@ class LeaderBoard extends React.Component {
 
   render() {
     return (
-      <div className="leaderBoard-main">
-            <div className="leaderBoard-userScore">
-                <p className="leaderBoard-text1">Your Score</p>
-                <span className="leaderBoard-span1">{this.props.userScore}</span>
-                <span className="leaderBoard-span2"> /{this.props.maxScore}</span>
-              </div>
-            <div className="leaderBoard-content">
-                <div className="leaderBoard-text">Leaderboard</div>
-                <LeaderTable
-                    leaderBoard={this.state.leaderBoard}
-                  />
-                <button className="leaderBoard-button" onClick={this.changeState}>
-                        Play again
-                  </button>
-              </div>
-          </div>
+      <View className="leaderBoard-main">
+        <View className="leaderBoard-userScore">
+          <Text className="leaderBoard-text1">Your Score</Text>
+          <Text>
+            <Text className="leaderBoard-span1">{this.props.userScore}</Text>
+            <Text className="leaderBoard-span2"> /{this.props.maxScore}</Text>
+          </Text>
+        </View>
+        <View className="leaderBoard-content">
+          <Text className="leaderBoard-text">Leaderboard</Text>
+          {/* <LeaderTable
+            leaderBoard={this.state.leaderBoard}
+          /> */}
+          <Button
+            className="leaderBoard-button"
+            onPress={this.changeState}
+            title="Play again"
+          />
+
+        </View>
+      </View>
     );
   }
 }
@@ -57,14 +68,12 @@ class LeaderBoard extends React.Component {
 LeaderBoard.propTypes = {
   userScore: PropTypes.number.isRequired,
   maxScore: PropTypes.number.isRequired,
+  changeState: PropTypes.func.isRequired,
 };
-export default LeaderBoard;
-
 
 const styles = StyleSheet.create({
   leaderBoardmain: {
-    display: flex,
-    alignItems: 'initial',
+    display: 'flex',
     flex: 1,
     width: '100%',
     justifyContent: 'space-around',
@@ -76,7 +85,7 @@ const styles = StyleSheet.create({
   },
 
   leaderBoarduserScore: {
-    paddingleft: '10%',
+    paddingLeft: '10%',
   },
 
   leaderBoardcontent: {
@@ -87,24 +96,26 @@ const styles = StyleSheet.create({
   },
 
   leaderBoardtext1: {
-    color: orange,
-    fontWeight: bold,
-    fontSize: '150%',
+    color: 'orange',
+    fontWeight: 'bold',
+    fontSize: 10,
   },
 
   leaderBoardspan1: {
-    fontSize: '250%',
-    fontWeight: lighter,
+    fontSize: 15,
+    fontWeight: '100',
   },
 
   leaderBoardspan2: {
-    fontSize: '150%',
-    fontWeight: bold,
+    fontSize: 10,
+    fontWeight: 'bold',
   },
 
   leaderBoardtext: {
-    fontWeight: bold,
-    fontSize: '150%',
+    fontWeight: 'bold',
+    fontSize: 10,
   },
 
 });
+
+export default LeaderBoard;
