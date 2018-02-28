@@ -13,7 +13,7 @@ class BodyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loginStatus: 0,
+      loginStatus: 2,
       username: '',
       maxScore: 0,
       userScore: 0,
@@ -111,14 +111,14 @@ class BodyComponent extends React.Component {
         </View>
       );
     } else if (this.state.loginStatus === 2) {
-    //   return (
-      // <LeaderBoard
-      //   changeState={this.changeState}
-      //   username={this.state.username}
-      //   maxScore={this.state.maxScore}
-      //   userScore={this.state.userScore}
-      // />
-    //   );
+      return (
+        <LeaderBoard
+          changeState={this.changeState}
+          username={this.state.username}
+          maxScore={this.state.maxScore}
+          userScore={this.state.userScore}
+        />
+      );
     }
     return (
       <View style={styles.Bodymain}>
