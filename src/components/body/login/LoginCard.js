@@ -3,6 +3,8 @@ import {
   StyleSheet,
   View,
   Text,
+  Button,
+  TextInput,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -49,17 +51,18 @@ class LoginCard extends React.Component {
           </Text>
           <View>
             <Text style={styles.LoginCardtext2}>Username</Text>
-            <input
+            <TextInput
               type="text"
               style={styles.LoginCardinput}
-              onChange={this.changeHandler}
+              onChangeText={this.changeHandler}
               value={this.state.userName}
             />
           </View>
           <Button
             style={styles.LoginCardlogin}
-            onClick={this.loginFn}
-          />Login
+            title="Login"
+            onPress={this.loginFn}
+          />
         </View>
       </View>
     );
