@@ -14,7 +14,7 @@ class BodyComponent extends React.Component {
     super(props);
     this.state = {
       loginStatus: 2,
-      username: '',
+      username: 'siddharth',
       maxScore: 0,
       userScore: 0,
       userResponse: {},

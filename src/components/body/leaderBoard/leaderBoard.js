@@ -50,9 +50,9 @@ class LeaderBoard extends React.Component {
         </View>
         <View className="leaderBoard-content">
           <Text className="leaderBoard-text">Leaderboard</Text>
-          {/* <LeaderTable
+          <LeaderTable
             leaderBoard={this.state.leaderBoard}
-          /> */}
+          />
           <Button
             className="leaderBoard-button"
             onPress={this.changeState}
