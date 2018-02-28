@@ -27,7 +27,7 @@ export default class App extends Component {
       <View style={styles.App}>
         {/* <Text>its working</Text> */}
         <Header username={this.state.username} />
-        <BodyComponent setHeaderText={this.setHeaderText} />
+        {/* <BodyComponent setHeaderText={this.setHeaderText} /> */}
       </View>
     );
   }
