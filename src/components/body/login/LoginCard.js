@@ -76,41 +76,44 @@ LoginCard.propTypes = {
 
 const styles = StyleSheet.create({
   LoginCardmain: {
-    width: '50%',
-    height: '100%',
     display: 'flex',
-
+    flex: 1,
   },
 
   LoginCardaligner: {
-    width: '10%',
+    height: '10%',
   },
 
   LoginCardContents: {
     display: 'flex',
     justifyContent: 'space-around',
-    fontSize: 40,
-    flex: 1,
-    fontWeight: 'bold',
+    alignItems: 'center',
+
   },
 
   LoginCardinput: {
-    height: 50,
-    width: '80%',
-    borderWidth: 6,
+    height: 20,
+    width: '40%',
+    borderWidth: 2,
     borderStyle: 'solid',
     borderColor: 'black',
-    fontSize: 30,
+    fontSize: 10,
   },
 
   LoginCardlogin: {
     alignSelf: 'center',
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: 'black',
     width: '40%',
     fontSize: 30,
-    borderRadius: 25,
+  },
+
+  LoginCardtext1: {
+    fontSize: 15,
+    fontWeight: 'bold',
+  },
+
+  LoginCardtext2: {
+    fontSize: 15,
+    fontWeight: 'bold',
   },
 
 });

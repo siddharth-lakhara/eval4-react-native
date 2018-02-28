@@ -22,21 +22,21 @@ const WelcomeCard = () => (
 
 const styles = StyleSheet.create({
   WelcomeCardmain: {
-    width: '50%',
+    width: '100%',
     backgroundColor: '#3BC0F3',
-    height: '100%',
+    height: '50%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   WelcomeCardtext1: {
-    fontSize: 40,
+    fontSize: 20,
   },
 
   WelcomeCardtext2: {
     color: 'white',
-    fontSize: 40,
+    fontSize: 20,
     fontWeight: 'bold',
   },
 });

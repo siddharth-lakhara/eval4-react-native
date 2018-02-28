@@ -28,11 +28,9 @@ const styles = StyleSheet.create({
   loginMainCard: {
     display: 'flex',
     backgroundColor: 'white',
-    alignItems: 'center',
-    height: '60%',
-    width: '50%',
-    flexWrap: 'wrap',
-    overflow: 'hidden',
+    height: '50%',
+    width: '70%',
+
   },
 });
 
